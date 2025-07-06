@@ -13,15 +13,14 @@ ROS 2 Distro | Branch | Build status
 The linorobot2_hardware repo uses platformio to build microcontroller firmware for mobile robots based on micro-ROS.
 It is extremely parameterized and easily customizable for varied hardware configurations.
 
-This version of linorobot2_hardware supports various flavors of the
-Expressif ESP32 and Raspberry Pi pico microcontrollers as well as other robot sensors.
-It should also support the legacy Teensy family of microcontrollers - support has not been removed - but Teensy is untested on this version.
-
 This firmware performs the low-level realtime interation with robot hardware.
 It accepts commands from, and delivers robot data to ROS2 software launched
 from the [linorobot2](https://github.com/linorobot/linorobot2) repo packages.
 See that repo for system architecture diagrams, and installation and operation instructions
 for running the ROS2 nodes. This firmware has been tested with the jazzy branch of linorobot2.
+
+This version of linorobot2_hardware supports various flavors of the
+Expressif ESP32 and Raspberry Pi pico microcontrollers as well as other robot sensors.
 
 #### Firmwware interaction with linorobot2 ROS nodes
 The micro-ROS robot controller firmware subscribes to /cmd_vel, converts the Twist message and commands motor drivers
@@ -35,10 +34,13 @@ The main benefit of this release of linorobot2_hardware is it enables running yo
 on real robot hardware using the Jazzy release of ROS2. This is excellent for those familiar with linorobot2 who want to run
 on ROS2 Jazzy.
 
+#### Teensy microcontroller family deprecated
+The last versions of the Teensy microcontroller family (4.0 and 4.1) were introduced in 2019 and 2020. The owner, PJRC, has transferred the design to Sparkfun and there will be no more Teensy models. This version of linorobot2_hardware should support the Teensy family of microcontrollers as it used to - support has not been removed - but Teensy is untested on this version and the Teensy family should be considered deprecated. Problems may not be fixed. This version of firmware changes the default baud rate for the micro-ROS serial connection to 921600 baud. Specs indicate the Teensy 3.2 and later should support that baud rate but this version of linorobot2_hardware has not been tested with any of the Teensy miicrocontrollers.
+
 #### Limitations and caveats
 This version of linorobot2_hardware is not the best place to start if you are beginning your hardware journey. As of this writing
 (July 2025):
-- This README.md is mainly focused on the legacy Teensy microcontroller and how to use it, and less focused on the
+- This README.md is mainly focused on the now-deprecated Teensy microcontroller and how to use it, and less focused on the
 more modern ESP32 and Pico.
 - This release of linorobot2 and linorobot2_hardware requires a serial port between the microcontroller and an on-robot computer.
 Micro-ROS over wifi is not documented or tested, and won't work "out of the box". This means you must have a robot computer
