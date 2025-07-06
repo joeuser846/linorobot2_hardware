@@ -105,7 +105,7 @@ IMU imu;
 MAG mag;
 
 #ifndef BAUDRATE
-#define BAUDRATE 115200
+#define BAUDRATE 921600
 #endif
 
 void setup() 
