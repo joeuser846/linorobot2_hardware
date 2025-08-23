@@ -54,13 +54,13 @@ ROBOT ORIENTATION
 */
 
 //define your robot' specs here
-#define MOTOR_MAX_RPM 100                   // motor's max RPM          
+#define MOTOR_MAX_RPM 150                   // motor's max RPM          
 #define MAX_RPM_RATIO 0.85                  // max RPM allowed for each MAX_RPM_ALLOWED = MOTOR_MAX_RPM * MAX_RPM_RATIO          
 #define MOTOR_OPERATING_VOLTAGE 12          // motor's operating voltage (used to calculate max RPM)
 #define MOTOR_POWER_MAX_VOLTAGE 10          // max voltage of the motor's power source (used to calculate max RPM)
 #define MOTOR_POWER_MEASURED_VOLTAGE 10     // current voltage reading of the power connected to the motor (used for calibration)
-#define COUNTS_PER_REV1 144000              // wheel1 encoder's no of ticks per rev
-#define COUNTS_PER_REV2 144000              // wheel2 encoder's no of ticks per rev
+#define COUNTS_PER_REV1 250                 // wheel1 encoder's no of ticks per rev
+#define COUNTS_PER_REV2 250                 // wheel2 encoder's no of ticks per rev
 #define COUNTS_PER_REV3 144000              // wheel3 encoder's no of ticks per rev
 #define COUNTS_PER_REV4 144000              // wheel4 encoder's no of ticks per rev
 #define WHEEL_DIAMETER 0.05                 // wheel's diameter in meters (5cm)
