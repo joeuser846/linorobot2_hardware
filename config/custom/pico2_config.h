@@ -32,7 +32,7 @@
 // #define USE_GY85_IMU
 // #define USE_MPU6050_IMU
 // #define USE_MPU9150_IMU
-/#define USE_MPU9250_IMU
+#define USE_MPU9250_IMU
 // #define USE_QMI8658_IMU
 // #define USE_HMC5883L_MAG
 // #define USE_AK8963_MAG
@@ -68,12 +68,12 @@ ROBOT ORIENTATION
 #define MOTOR_OPERATING_VOLTAGE 12          // motor's operating voltage (used to calculate max RPM)
 #define MOTOR_POWER_MAX_VOLTAGE 12          // max voltage of the motor's power source (used to calculate max RPM)
 #define MOTOR_POWER_MEASURED_VOLTAGE 12     // current voltage reading of the power connected to the motor (used for calibration)
-#define COUNTS_PER_REV1 900                 // wheel1 encoder's no of ticks per rev
-#define COUNTS_PER_REV2 900                 // wheel2 encoder's no of ticks per rev
+#define COUNTS_PER_REV1 250                 // wheel1 encoder's no of ticks per rev
+#define COUNTS_PER_REV2 250                 // wheel2 encoder's no of ticks per rev
 #define COUNTS_PER_REV3 900                 // wheel3 encoder's no of ticks per rev
 #define COUNTS_PER_REV4 900                 // wheel4 encoder's no of ticks per rev
-#define WHEEL_DIAMETER 0.0560               // wheel's diameter in meters
-#define LR_WHEELS_DISTANCE 0.224            // distance between left and right wheels
+#define WHEEL_DIAMETER 0.05                // wheel's diameter in meters
+#define LR_WHEELS_DISTANCE 0.16             // distance between left and right wheels
 #define PWM_BITS 10                         // PWM Resolution of the microcontroller
 #define PWM_FREQUENCY 20000                 // PWM Frequency
 #define SERVO_BITS 12                       // Servo PWM resolution
